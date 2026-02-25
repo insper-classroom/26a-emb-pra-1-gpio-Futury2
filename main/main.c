@@ -78,7 +78,7 @@ int main() {
             
             bool estado_verificado = gpio_get(BTN_PIN);
             if (estado_verificado != estado) {
-                if (!estado && estado_verificado) {
+                if (!estado) {
                     gpio_put(LED_PIN, 1);
                     girar_sentido_horario(); 
                     gpio_put(LED_PIN, 0);
